@@ -1,16 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './index.css';
-import Menu from './Menu';
 import { CssBaseline } from '@mui/material';
-import Menu2 from './Menu2';
-import Menu3 from './Menu3';
+import RefHook from './RefHook';
+import EffectHook from './EffectHook';
+import { ThemeContextProvider } from './context/ThemeContext';
+import ContextHook from './ContextHook';
+import Tulisan from './Tulisan';
+import TextBox from './TextBox';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <CssBaseline />
-        {/* <Menu /> */}
-        {/* <Menu2 /> */}
-        <Menu3 />
+        <ThemeContextProvider>
+            <CssBaseline />
+            {/* <RefHook /> */}
+            {/* <EffectHook /> */}
+            <ContextHook />
+            <Tulisan />
+            <TextBox />
+        </ThemeContextProvider>
     </React.StrictMode>
 );
